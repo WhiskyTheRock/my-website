@@ -1,1 +1,88 @@
+/* Alapbeállítások és letisztult betűtípus */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    
+    /* HÁTTÉRKÉP BEÁLLÍTÁSA: 
+       Itt tudod később kicserélni a képet egy saját kép URL-jére vagy fájlnevére! */
+    background-image: url('hatter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Sötétítő réteg a háttéren, hogy a fehér szövegek mindig jól láthatóak legyenek */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+/* Központi tartalom doboza (üveg hatású kártya) */
+.container {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+/* Gombok elrendezése és dizájnja */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    display: block;
+    padding: 0.9rem 1.5rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Interakció, amikor a gomb fölé viszed a kurzort vagy rákattintasz mobilról */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
